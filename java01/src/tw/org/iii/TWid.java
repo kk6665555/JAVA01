@@ -19,13 +19,15 @@ public class TWid {
 		//super();
 		char f0 = letters.charAt(area);
 		char f1 = isFemale?'2':'1';
-		String temp = " " + f0 + f1;
-		for(int i = 0;i<=7;i++){
-			temp+=(int)(Math.random()*10);
+		StringBuffer sb = new StringBuffer( "" + f0 + f1);
+	//	String temp = "" + f0 + f1;
+		for(int i = 0;i<7;i++){
+			sb.append((int)(Math.random()*10));
+			//temp+=(int)(Math.random()*10);
 		}
 		for(int i = 0;i<10;i++){
 				if(isCheck(temp+i)){
-					id=temp+i;
+					//id=temp+i;
 					break;
 				}
 		}
@@ -44,7 +46,7 @@ public class TWid {
 		return id;
 	}
 	static boolean isCheck(String id){
-		if (!id.matches("^[A-Z][12][0-9]{8}")) return true;
+		if (!id.matches("^[A-Z][12][0-9]{8}")) return false;
 		char f0 = id.charAt(0);
 		int n12 = letters.indexOf(f0)+10;//²Ä¤@½X
 		int n1 = n12/10;
