@@ -26,8 +26,9 @@ public class TWid {
 			//temp+=(int)(Math.random()*10);
 		}
 		for(int i = 0;i<10;i++){
-				if(isCheck(temp+i)){
+				if(isCheck(sb.toString() + i)){
 					//id=temp+i;
+					id = sb.append(i).toString();
 					break;
 				}
 		}

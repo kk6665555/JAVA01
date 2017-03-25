@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class java15 extends JFrame{
 	private JButton open,save,exit;
-	private MyPen MyPen;
+	private MyPen MyPen3;
 	public java15(){
 		//super();
 		super("視窗");
@@ -23,11 +23,11 @@ public class java15 extends JFrame{
 //		add(save,BorderLayout.SOUTH); 
 //		add(Exit,BorderLayout.CENTER);
 		JPanel TOP= new JPanel(new FlowLayout());
-		MyPen=new MyPen();
+		MyPen3=new MyPen();
 		TOP.add(open);		TOP.add(save);		TOP.add(exit);
 		
 		add(TOP,BorderLayout.NORTH);//塞到border的北邊
-		add(MyPen,BorderLayout.CENTER);
+		add(MyPen3,BorderLayout.CENTER);
 		
 		
 		
