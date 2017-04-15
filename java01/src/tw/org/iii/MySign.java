@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import javax.net.ssl.HostnameVerifier;
+import javax.swing.JColorChooser;
 import javax.swing.JPanel;
 
 public class MySign extends JPanel {
 	private LinkedList<LinkedList<HashMap<String, Integer>>> lines,r;
-	
 	public MySign(){
 //		setBackground(Color.BLACK);
 		
@@ -56,6 +56,10 @@ public class MySign extends JPanel {
 	public void redo(){
 		lines.add(r.removeLast());
 		repaint();
+	}
+	public void color(){
+		Color newColor = JColorChooser.showDialog(MySign.this, "Select a Color", Color.white);
+	
 	}
 	
 	private class mymouse extends MouseAdapter {
